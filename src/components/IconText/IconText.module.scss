@@ -1,0 +1,59 @@
+@use '../../styles/variables.scss' as v;
+
+
+.container {
+  display: flex;
+  align-items: center;
+
+  img {
+    // width: 2rem;
+    // height: 2rem;
+    margin-right: 2rem;
+  }
+
+  .location {
+    margin-right: 2.4rem;
+  }
+
+  p, a {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    font-weight: v.$font-weight-regular;
+    text-decoration: none;
+
+    @include v.tablet {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  a {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.light {
+
+  p, a {
+    color: v.$color-dark-blue;
+  }
+}
+
+.dark {
+  img {
+    filter: brightness(100);
+  }
+
+  p, a {
+    color: v.$color-white;
+  }
+}
+
+
+.notFound {
+  opacity: 0.5;
+}

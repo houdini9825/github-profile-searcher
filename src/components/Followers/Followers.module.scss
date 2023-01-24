@@ -1,0 +1,64 @@
+@use '../../styles/variables.scss' as v;
+
+.container {
+  padding: 1.8rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
+
+  @include v.tablet {
+    padding: 1.5rem 3.2rem;
+  }
+
+  div {
+    text-align: center;
+
+    @include v.tablet {
+      text-align: left;
+    }
+  }
+
+  .title {
+    font-weight: v.$font-weight-regular;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+
+    @include v.tablet {
+      font-size: 1.3rem;
+      line-height: 1.9rem;
+    }
+  }
+
+  .value {
+    font-weight: v.$font-weight-bold;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    margin-top: 0.8rem;
+
+    @include v.tablet {
+      margin-top: 0.1rem;
+      font-size: 2.2rem;
+      line-height: 3.3rem;
+    }
+  }
+}
+
+
+
+.light {
+  background-color: v.$color-white-1;
+
+  .title {
+    color: v.$color-dark-blue;
+  }
+
+  .value {
+    color: v.$color-black-1;
+  }
+}
+
+.dark {
+  background-color: v.$color-black-2;
+  color: v.$color-white;
+}

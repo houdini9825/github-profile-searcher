@@ -1,0 +1,64 @@
+@use '../../styles/variables.scss' as v;
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-weight: v.$font-weight-bold;
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+  }
+
+  button {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    letter-spacing: 2.5px;
+    font-weight: v.$font-weight-bold;
+    background-color: transparent;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1.6rem;
+  }
+}
+
+
+
+.light {
+  h1 {
+    color: v.$color-black-4;
+  }
+
+  button {
+    color: v.$color-dark-blue;
+  }
+}
+
+.dark {
+  h1 {
+    color: v.$color-white;
+  }
+
+  button {
+    color: v.$color-white;
+  }
+
+  img {
+    filter: brightness(100);
+  }
+}

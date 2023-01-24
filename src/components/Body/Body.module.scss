@@ -1,0 +1,145 @@
+@use '../../styles/variables.scss' as v;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.2rem 2.4rem 4.8rem;
+  border-radius: 1.5rem;
+
+  @include v.tablet {
+    padding: 4rem;
+  }
+
+  .titleContainer {
+    display: flex;
+
+    img {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+
+      @include v.tablet {
+        width: 11.7rem;
+        height: 11.7rem;
+      }
+    }
+
+    .innerTitleContainer {
+      margin-left: 1.9rem;
+
+      @include v.tablet {
+        margin-left: 4.1rem;
+      }
+    }
+
+    h3 {
+      font-weight: v.$font-weight-bold;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+
+      @include v.tablet {
+        font-size: 2.6rem;
+        line-height: 3.9rem;
+      }
+    }
+
+    .gitHandle {
+      font-weight: v.$font-weight-regular;
+      font-size: 1.3rem;
+      line-height: 1.9rem;
+      color: v.$color-blue;
+
+      @include v.tablet {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    .joinDate {
+      font-weight: v.$font-weight-regular;
+      font-size: 1.3rem;
+      line-height: 1.9rem;
+      margin-top: 0.6rem;
+
+      @include v.tablet {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+
+  .bio {
+    margin-top: 3.3rem;
+    font-weight: v.$font-weight-regular;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+
+    @include v.tablet {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      margin-top: 2.4rem;
+    }
+  }
+
+  .followers {
+    margin-top: 2.4rem;
+
+    @include v.tablet {
+      margin-top: 3.2rem;
+    }
+  
+  }
+
+  .iconTextContainer {
+    margin-top: 2.4rem;
+
+    @include v.tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 3rem;
+    }
+
+    .icon {
+      margin-bottom: 1.6rem;
+
+      @include v.tablet {
+        margin-right: 6.5em;
+      }
+    }
+  }
+
+
+}
+
+.light {
+  background-color: v.$color-white-2;
+
+  h3 {
+    color: v.$color-black-1;
+  }
+
+  .joinDate {
+    color: v.$color-gray;
+  } 
+
+  .bio {
+    color: v.$color-dark-blue;
+  }
+}
+
+.dark {
+  background-color: v.$color-black-3;
+
+  h3 {
+    color: v.$color-white;
+  }
+
+  .joinDate {
+      color: v.$color-white;
+  }
+
+  .bio {
+    color: v.$color-white;
+  }
+}

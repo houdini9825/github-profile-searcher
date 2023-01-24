@@ -1,0 +1,108 @@
+@use '../../styles/variables.scss' as v;
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.5rem;
+  padding: 0.7rem 1.6rem;
+
+  @include v.tablet {
+    padding: 2.4rem 3.2rem;
+  }
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.8rem;
+
+    @include v.tablet {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 2.3rem;
+    }
+  }
+
+  input {
+    font-weight: v.$font-weight-regular;
+    font-size: 1.3rem;
+    width: 100%;
+    line-height: 2.5rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    &::placeholder {
+      font-size: 1.1rem;
+    }
+
+    @include v.tablet {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+
+      &::placeholder {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.3rem;
+    color: v.$color-red;
+    line-height: 2.5rem;
+    font-weight: v.$font-weight-bold;
+    margin-right: 1rem;
+
+    @include v.tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  button {
+    padding: 1.2rem 1.8rem;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: v.$font-weight-bold;
+    color: v.$color-white;
+    background-color: v.$color-blue;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    margin-left: 0.7rem;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    &:active {
+      translate: 0 1px;
+    }
+
+    @include v.tablet {
+      padding: 1.2rem 2.4rem;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+}
+
+
+.light {
+
+  background-color: v.$color-white-2;
+
+  input {
+    color: v.$color-dark-blue;
+  }
+
+}
+
+.dark {
+  background-color: v.$color-black-3;
+  input {
+    color: v.$color-white;
+  }
+
+}
